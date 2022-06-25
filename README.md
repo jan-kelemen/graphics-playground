@@ -1,5 +1,5 @@
 # graphics-playground 
-Playground for grapics related projects.
+Playground for graphics related projects.
 
 ## Supported compilers
 - GCC 11

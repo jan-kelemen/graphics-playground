@@ -4,7 +4,9 @@ include(${PROJECT_SOURCE_DIR}/cmake/conan.cmake)
 
 conan_cmake_configure(
     REQUIRES
-        catch2/2.13.8
+        vulkan-loader/1.3.216.0
+        glfw/3.3.7
+        glm/0.9.9.8
     GENERATORS
         cmake_find_package
 )
@@ -15,4 +17,6 @@ conan_cmake_install(PATH_OR_REFERENCE .
                     BUILD missing
                     SETTINGS ${settings})
 
-find_package(Catch2 REQUIRED)
+find_package(Vulkan REQUIRED FATAL_ERROR)
+find_package(glfw3 REQUIRED)
+find_package(glm REQUIRED)
